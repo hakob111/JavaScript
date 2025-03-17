@@ -147,35 +147,29 @@ console.log(result);*/
 // }
 // console.log(a);
 
+/* the last home worq
 const lines = 5;
 let result = '';
-let spaces = lines + 1;
-// Проверяется именно переменная result, формируйте строку в ней
-for (let i = 0; i <= lines; i++)
-   {
-      for (let j = 0; j < lines - i; j++)
+let spaces = 5;
+for (let i = 1; i <= lines + 1; i++){
+    for (let j = 0; j < i; j++){
+        if(j == 0){
+         for(let k = spaces; k > 0; k--)
          {
-            if(j == 0)
-            {
-               for (let k = lines - i; k > 0; k--)
-               {
-                  result = ' ' + result;
-                  spaces--;
-               }
-               result += '*';
-            } 
-         else 
-         {
-            for (let l = lines - i; l > 0; l--)
-            {
-               result = ' ' + result;
-               spaces--;
-            } 
-            result += '**';
+            result = " " + result;
+            spaces--;
+         }
+         result += '*';
+        } else {
+         result += '**';
         }
-        spaces = lines + 1;
-      }
+        
+   }
    result += '\n';
+   for(let l = lines - i ; l > 0; l--)
+      {
+         result += " ";
+      }
 }
 
-console.log(result)
+console.log(result)*/
