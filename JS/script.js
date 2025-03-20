@@ -1,23 +1,41 @@
 // alert("hello");
 //let result = comfirm("Are you heare?");
-//"use strict";
-// let numberofFiles = prompt("How meny films have you woched", "");
+"use strict";
+let numberofFiles = +prompt("how meni films have you woched");
 
-// personalMovieDB = {
-//     count: numberofFiles,
-//     movies: {},
-//     actors: {},
-//     generes: [],
-//     privat: false
-// };
-//  let lastFilm = prompt("One of the last films which you have woched", "");
-//  let filmPoint = prompt("How much would you rate it", "");
-//  let lastFilm2 = prompt("One of the last films which you have woched", "");
-//  let filmPoint2 = prompt("How much would you rate it", "");
-//  personalMovieDB["movies"][lastFilm] = filmPoint;
-//  personalMovieDB["movies"][lastFilm2] = filmPoint2;
+let personalMovieDB = {
+    count: numberofFiles,
+    movies: {},
+    actors: {},
+    generes: [],
+    privat: false
+};
 
-//  console.log(personalMovieDB);
+
+for (let i = 0; i < 2; i++){
+    let lastFilm = prompt("One of the last films which you have woched", "");
+    let filmPoint = prompt("How much would you rate it", "");
+    if (!lastFilm || !filmPoint){
+        alert("It can not be empty");
+        i--;
+    }else if(lastFilm.length > 50){
+        alert("it can not be so ling ");
+        i--;
+    }
+    personalMovieDB.movies[lastFilm] = filmPoint;
+}
+
+if (personalMovieDB.count < 10){
+    confirm("Whoched films not inaf ");
+}else if (10 <= personalMovieDB.count <= 30){
+    confirm("You are classic film wocher");
+}else if (personalMovieDB.count > 30){
+    confirm("You are kinoman ");
+}else{
+    alert("error")
+}
+
+console.log(personalMovieDB);
 
 /*home work 2
 console.log( NaN || 2 || undefined );
