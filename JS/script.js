@@ -1,41 +1,41 @@
 // alert("hello");
 //let result = comfirm("Are you heare?");
-"use strict";
-let numberofFiles = +prompt("how meni films have you woched");
+// "use strict";
+// let numberofFiles = +prompt("how meni films have you woched");
 
-let personalMovieDB = {
-    count: numberofFiles,
-    movies: {},
-    actors: {},
-    generes: [],
-    privat: false
-};
+// let personalMovieDB = {
+//     count: numberofFiles,
+//     movies: {},
+//     actors: {},
+//     generes: [],
+//     privat: false
+// };
 
 
-for (let i = 0; i < 2; i++){
-    let lastFilm = prompt("One of the last films which you have woched", "");
-    let filmPoint = prompt("How much would you rate it", "");
-    if (!lastFilm || !filmPoint){
-        alert("It can not be empty");
-        i--;
-    }else if(lastFilm.length > 50){
-        alert("it can not be so ling ");
-        i--;
-    }
-    personalMovieDB.movies[lastFilm] = filmPoint;
-}
+// for (let i = 0; i < 2; i++){
+//     let lastFilm = prompt("One of the last films which you have woched", "");
+//     let filmPoint = prompt("How much would you rate it", "");
+//     if (!lastFilm || !filmPoint){
+//         alert("It can not be empty");
+//         i--;
+//     }else if(lastFilm.length > 50){
+//         alert("it can not be so ling ");
+//         i--;
+//     }
+//     personalMovieDB.movies[lastFilm] = filmPoint;
+// }
 
-if (personalMovieDB.count < 10){
-    confirm("Whoched films not inaf ");
-}else if (10 <= personalMovieDB.count <= 30){
-    confirm("You are classic film wocher");
-}else if (personalMovieDB.count > 30){
-    confirm("You are kinoman ");
-}else{
-    alert("error")
-}
+// if (personalMovieDB.count < 10){
+//     confirm("Whoched films not inaf ");
+// }else if (10 <= personalMovieDB.count <= 30){
+//     confirm("You are classic film wocher");
+// }else if (personalMovieDB.count > 30){
+//     confirm("You are kinoman ");
+// }else{
+//     alert("error")
+// }
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
 
 /*home work 2
 console.log( NaN || 2 || undefined );
@@ -191,3 +191,23 @@ for (let i = 1; i <= lines + 1; i++){
 }
 
 console.log(result)*/
+
+/* New test */
+
+function getMathResult(base, repit) {
+    let result = "";
+    if (repit <= 0 || typeof(repit) !== "number"){
+           return base;
+    }
+    for (let i = 1; i <= repit ; i++){
+        if (i == repit) {
+            result += `${base * i}`;
+        }
+        else {
+            result += `${base * i }---`;
+        }
+    }
+    return result;
+}
+
+console.log(getMathResult(5, 3));
